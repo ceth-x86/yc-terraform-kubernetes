@@ -7,7 +7,7 @@ terraform {
 }
 
 resource "yandex_kubernetes_cluster" "k8" {
-  name        = "k8"
+  name        = var.name
   description = "test cluster"
 
   network_id = var.network_id
@@ -45,7 +45,7 @@ resource "yandex_kubernetes_cluster" "k8" {
   kms_provider {
     key_id = var.key_id
   }
-} 
+}
 
 resource "yandex_kubernetes_node_group" "k8-node-group" {
   cluster_id  = yandex_kubernetes_cluster.k8.id

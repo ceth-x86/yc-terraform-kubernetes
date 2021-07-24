@@ -26,7 +26,8 @@ module "resourcemanager" {
 
 module "kubernetes" {
   source = "./modules/kubernetes"
-  zone = var.zone 
+  name = var.name
+  zone = var.zone
   network_id = module.networking.network_id
   subnet_id = module.networking.subnet_id
   service_account_id = module.resourcemanager.service_account_id

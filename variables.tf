@@ -14,7 +14,15 @@ variable "folder_id" {
 }
 
 variable "zone" {
-  description = "Availability zone"
+  description = "Availability zone."
   type = string
   default = "ru-central1-c"
+}
+
+variable "name" {
+  description = "Name of specific Kubernetes cluster."
+
+  type = string
+
+  default = null
 }

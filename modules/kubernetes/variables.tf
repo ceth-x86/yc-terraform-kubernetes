@@ -18,3 +18,7 @@ variable "service_account_id" {
 variable "key_id" {
   type = string
 }
+
+variable "name" {
+  type = string
+}
